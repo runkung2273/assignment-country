@@ -1,0 +1,17 @@
+<div id="assignment-page" class="container">
+    <input class="searchbox" type="text" placeholder="Search country.." [(ngModel)]="search">
+    <div class="country-box" *ngFor="let country of countries | FilterPipe: search | paginate: { itemsPerPage: 10, currentPage:currentPage }">
+        <div class="countryname-population">
+            <div class="countryname">{{country.name}}</div>
+            <div class="population">population</div>
+        </div>
+        <div class="capital-region-population">
+            <div class="capital-region">
+                <div class="capital">{{country.capital}},&nbsp;</div>
+                <div class="region">{{country.subregion}}</div>
+            </div>
+            <div class="population">{{country.population}}</div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>

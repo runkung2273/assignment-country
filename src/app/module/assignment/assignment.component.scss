@@ -1,0 +1,42 @@
+$blue-5391f6: #5391f6;
+$gray-cecece: #cecece;
+#assignment-page{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    max-width: 500px;
+    margin: 0 auto;
+    .searchbox{
+        border: none;
+        border-bottom: 2px solid darkgray;
+        font-size: 30px;
+        outline: none;
+        margin-bottom: 16px;
+    }
+    .country-box{
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        .countryname-population{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            .countryname{
+                color: $blue-5391f6;
+                font-size: 20px;
+            }
+        }
+        .capital-region-population{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .capital-region{
+                display: flex;
+                .region{
+                    color: darkgray;
+                }
+            }
+        }
+    }
+}
